@@ -166,7 +166,18 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
+If you are using redis for your system, you will want to make sure to enable that it will start on boot. You can do that by running the following command:
 
+```shell
+sudo systemctl enable --now redis-server
+```
+Finally, enable the service and set it to boot on machine start.
+
+```shell
+sudo systemctl enable --now pteroq.service
+```
+
+# Next Step: Webserver Configuration
 
 
 
