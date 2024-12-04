@@ -1,5 +1,7 @@
 # Writ-305
 WP# 3
+
+
 ```shell
 rm /etc/nginx/sites-enabled/default
 ```
@@ -9,7 +11,8 @@ test
 
 ```shell
 server {
-    # Replace the example <domain> with your domain name or IP address
+    # Replace the example <domain> with your domain name or IP address![jest_logo](https://github.com/user-attachments/assets/e706b098-1d14-4aea-ac63-4cef5f237c4f)
+
     listen 80;
     server_name <domain>;
     return 301 https://$server_name$request_uri;
