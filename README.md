@@ -2,3 +2,6 @@
 WP# 3
 ```shell
 rm /etc/nginx/sites-enabled/default
+```
+
+test
