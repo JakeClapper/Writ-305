@@ -105,10 +105,18 @@ php artisan p:environment:database
 php artisan p:environment:mail
 ```
 
+# Database Setup
+
+```shell
+php artisan migrate --seed --force
+```
 
 
+# Add The First User
 
-
+```shell
+php artisan p:user:make
+```
 
 
 
