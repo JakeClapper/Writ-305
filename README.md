@@ -30,8 +30,20 @@ apt update
 apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
+Installing Composer
 
+```shell
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+```
 
+Download Files
+
+```shell
+mkdir -p /var/www/pterodactyl
+```
+```shell
+cd /var/www/pterodactyl
+```
 
 
 
