@@ -120,6 +120,56 @@ php artisan p:user:make
 
 
 
+# Set Permissions
+
+```shell
+# If using NGINX, Apache or Caddy (not on RHEL / Rocky Linux / AlmaLinux)
+chown -R www-data:www-data /var/www/pterodactyl/*
+
+# If using NGINX on RHEL / Rocky Linux / AlmaLinux
+chown -R nginx:nginx /var/www/pterodactyl/*
+
+# If using Apache on RHEL / Rocky Linux / AlmaLinux
+chown -R apache:apache /var/www/pterodactyl/*
+```
+
+# Queue Listeners
+
+# Crontab Configuration
+
+```shell
+* * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
+```
+
+# Create Queue Worker
+
+```shell
+# Pterodactyl Queue Worker File
+# ----------------------------------
+
+[Unit]
+Description=Pterodactyl Queue Worker
+After=redis-server.service
+
+[Service]
+# On some systems the user and group might be different.
+# Some systems use `apache` or `nginx` as the user and group.
+User=www-data
+Group=www-data
+Restart=always
+ExecStart=/usr/bin/php /var/www/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
+StartLimitInterval=180
+StartLimitBurst=30
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+
+
+
 
 
 
