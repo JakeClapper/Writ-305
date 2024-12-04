@@ -1,6 +1,41 @@
 # Writ-305
 WP# 3
 
+Dependency Installation
+
+```shell
+apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
+```
+
+```shell
+LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+```
+
+```shell
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+```
+
+```shell
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+```
+
+```shell
+apt update
+```
+
+```shell
+apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+```
+
+
+
+
+
+
+
+
+
+
 
 ```shell
 rm /etc/nginx/sites-enabled/default
@@ -88,3 +123,9 @@ sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/
 ```shell
 sudo systemctl restart nginx
 ```
+
+test
+
+Starting Wings
+
+```shell
