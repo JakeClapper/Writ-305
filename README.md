@@ -46,10 +46,30 @@ cd /var/www/pterodactyl
 ```
 
 
+```shell
+curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
+```
+```shell
+tar -xzvf panel.tar.gz
+```
+```shell
+chmod -R 755 storage/* bootstrap/cache/
+```
+
+
+Installation
 
 
 
 
+Database Configuration
+
+You will need a database setup and a user with the correct permissions created for that database before continuing any further. See below to create a user and database for your Pterodactyl panel quickly. To find more detailed information please have a look at Setting up MySQL.
+
+
+
+
+```shell
 
 
 ```shell
