@@ -94,7 +94,16 @@ php artisan key:generate --force
 ```
 
 
+# Environment Configuration
 
+```shell
+php artisan p:environment:setup
+php artisan p:environment:database
+
+# To use PHP's internal mail sending (not recommended), select "mail". To use a
+# custom SMTP server, select "smtp".
+php artisan p:environment:mail
+```
 
 
 
