@@ -66,7 +66,13 @@ Database Configuration
 
 You will need a database setup and a user with the correct permissions created for that database before continuing any further. See below to create a user and database for your Pterodactyl panel quickly. To find more detailed information please have a look at Setting up MySQL.
 
+```shell
+# If using MariaDB (v11.0.0+) (This is the default when installing Pterodactyl by following the documentation.)
+mariadb -u root -p
+```
 
+# If using MySQL
+mysql -u root -p
 
 
 ```shell
