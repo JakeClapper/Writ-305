@@ -7,7 +7,7 @@ rm /etc/nginx/sites-enabled/default
 test
 
 
-```bash
+```shell
 server {
     # Replace the example <domain> with your domain name or IP address
     listen 80;
