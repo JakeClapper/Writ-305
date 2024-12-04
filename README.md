@@ -80,3 +80,11 @@ server {
 ```
 
 test
+
+```shell
+sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/pterodactyl.conf
+```
+
+```shell
+sudo systemctl restart nginx
+```
