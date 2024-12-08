@@ -207,6 +207,7 @@ php artisan p:user:make
 <br>
 <br>
 
+# Part: 8
 # Set Permissions
 
 <br>
@@ -219,7 +220,7 @@ chown -R www-data:www-data /var/www/pterodactyl/*
 <br>
 
 
-# Part: 7
+# Part: 9
 # Crontab Configuration
 
 <br>
@@ -240,8 +241,22 @@ sudo crontab -e
 <br>
 <br>
 
+# Part: 10
 # Create Queue Worker
 
+<br>
+
+- __Step: 1 # creates the pteroq.service file in the /etc/systemd/system/ directory.__
+
+```shell
+sudo nano /etc/systemd/system/pteroq.service
+```
+
+
+
+<br>
+
+- __Step: 2 # Inside the nano editor, paste the following contents.__
 ```shell
 # Pterodactyl Queue Worker File
 # ----------------------------------
@@ -265,13 +280,17 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
-If you are using redis for your system, you will want to make sure to enable that it will start on boot. You can do that by running the following command:
 
+<br>
+
+- __Step: 3 # Enables and starts the Redis service.__
 ```shell
 sudo systemctl enable --now redis-server
 ```
-Finally, enable the service and set it to boot on machine start.
 
+<br>
+
+- __Step: 4 # enables the service to start at boot and starts it.__
 ```shell
 sudo systemctl enable --now pteroq.service
 ```
