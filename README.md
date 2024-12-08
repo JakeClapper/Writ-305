@@ -525,4 +525,4 @@ sudo chmod u+x /usr/local/bin/wings
 # Node Allocations
 
 
-![alt text]([http://url/to/img.png](https://pterodactyl.io/assets/img/wings_configuration_example.9f3fdd0b.png))
+([http://url/to/img.png](https://pterodactyl.io/assets/img/wings_configuration_example.9f3fdd0b.png))
