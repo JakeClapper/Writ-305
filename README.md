@@ -3,10 +3,15 @@ WP# 3
 <br>
 <br>
 
+```diff
++ This text will appear in green
+- This text will appear in red
+! This text will appear in orange (varies by theme)
+# This text will appear in gray
+```
+
 # Dependency Installation
 
-<span style="color:red">This is red text</span>
-- <span style="color:red">- Step: 1 # Add "add-apt-repository" command</span>
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 ```
