@@ -1,7 +1,7 @@
 # Writ-305
 WP# 3
 
-Dependency Installation
+# Dependency Installation
 
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
