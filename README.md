@@ -6,31 +6,47 @@ WP# 3
 
 
 
-# Dependency Installation
+# Dependency Installation 
 - __Step: 1 # Add "add-apt-repository" command__
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 ```
+<br>
+
+- __Step: 2 # Add additional repositories for PHP (Ubuntu 20.04 and Ubuntu 22.04)__
 
 ```shell
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 ```
+<br>
+
+- __Step: 3 # Add Redis official APT repository__
 
 ```shell
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 ```
+
 ```shell
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
 ```
+<br>
+
+- __Step: 4 # MariaDB repo setup script (Ubuntu 20.04)y__
 
 ```shell
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 ```
+<br>
 
+- __Step: 5 # Update repositories list__
+  
 ```shell
 apt update
 ```
+<br>
 
+- __Step: 6 # Update repositories list__
+  
 ```shell
 apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
