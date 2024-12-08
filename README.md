@@ -185,16 +185,20 @@ php artisan p:environment:mail
 <br>
 <br>
 
+# Part: 6
 # Database Setup
 
+<br>
+
+- __Step: 1 # runs the database migrations to set up the necessary tables and structures.__
 ```shell
 php artisan migrate --seed --force
 ```
 
-<br>
-<br>
-# Add The First User
 
+<br>
+
+- __Step: 2 # creates the first administrative user for the Pterodactyl Panel.__
 ```shell
 php artisan p:user:make
 ```
@@ -205,26 +209,30 @@ php artisan p:user:make
 
 # Set Permissions
 
+<br>
+
+- __Step: 1 # Changes the ownership of all files and directories.__
 ```shell
-# If using NGINX, Apache or Caddy (not on RHEL / Rocky Linux / AlmaLinux)
 chown -R www-data:www-data /var/www/pterodactyl/*
-
-# If using NGINX on RHEL / Rocky Linux / AlmaLinux
-chown -R nginx:nginx /var/www/pterodactyl/*
-
-# If using Apache on RHEL / Rocky Linux / AlmaLinux
-chown -R apache:apache /var/www/pterodactyl/*
 ```
 <br>
 <br>
 
-# Queue Listeners
 
-<br>
-<br>
-
+# Part: 7
 # Crontab Configuration
 
+<br>
+
+- __Step: 1 # Opens the root user's crontab file for editing.__
+  
+```shell
+sudo crontab -e
+```
+<br>
+
+- __Step: 2 # schedules a task to run every minute.__
+    
 ```shell
 * * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
