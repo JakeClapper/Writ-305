@@ -4,7 +4,7 @@ WP# 3
 <br>
 
 # Dependency Installation
-```diff
+diff
 - Step: 1 # Add "add-apt-repository" command
 ```
 ```shell
