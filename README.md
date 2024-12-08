@@ -3,12 +3,7 @@ WP# 3
 <br>
 <br>
 
-```diff
-+ This text will appear in green
-- This text will appear in red
-! This text will appear in orange (varies by theme)
-# This text will appear in gray
-```
+<p style="color: green;">+ This text will appear in green</p>
 
 # Dependency Installation
 
