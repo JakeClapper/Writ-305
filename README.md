@@ -308,19 +308,19 @@ rm /etc/nginx/sites-enabled/default
 test
 
 
-```diff
+```shell
 server {
     # Replace the example <domain> with your domain name or IP address![jest_logo](https://github.com/user-attachments/assets/e706b098-1d14-4aea-ac63-4cef5f237c4f)
 
     listen 80;
-    - server_name <domain>;
+    server_name <domain>;
     return 301 https://$server_name$request_uri;
 }
 
 server {
     # Replace the example <domain> with your domain name or IP address
     listen 443 ssl http2;
-    - server_name <domain>;
+    server_name <domain>;
 
     root /var/www/pterodactyl/public;
     index index.php;
@@ -335,8 +335,8 @@ server {
     sendfile off;
 
     # SSL Configuration - Replace the example <domain> with your domain
-    - ssl_certificate /etc/letsencrypt/live/<domain>/fullchain.pem;
-    - ssl_certificate_key /etc/letsencrypt/live/<domain>/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/<domain>/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/<domain>/privkey.pem;
     ssl_session_cache shared:SSL:10m;
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
