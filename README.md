@@ -4,7 +4,9 @@ WP# 3
 <br>
 
 # Dependency Installation
-
+```diff
+- Step: 1 # Add "add-apt-repository" command
+```
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 ```
