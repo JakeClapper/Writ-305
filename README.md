@@ -30,13 +30,13 @@ apt update
 apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
-Installing Composer
+# Installing Composer
 
 ```shell
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
-Download Files
+# Download Files
 
 ```shell
 mkdir -p /var/www/pterodactyl
@@ -57,12 +57,12 @@ chmod -R 755 storage/* bootstrap/cache/
 ```
 
 
-Installation
+# Installation
 
 
 
 
-Database Configuration
+# Database Configuration
 
 You will need a database setup and a user with the correct permissions created for that database before continuing any further. See below to create a user and database for your Pterodactyl panel quickly. To find more detailed information please have a look at Setting up MySQL.
 
