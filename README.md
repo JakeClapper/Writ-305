@@ -5,7 +5,7 @@ WP# 3
 
 
 
-
+# Part: 1
 # Dependency Installation 
 - __Step: 1 # Add "add-apt-repository" command__
 ```shell
@@ -53,6 +53,7 @@ apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 <br>
 <br>
 
+# Part: 2
 # Installing Composer
 <br>
 
@@ -65,38 +66,39 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 <br>
 <br>
 
+# Part: 3
 # Download Files
 <br>
 
-- __This command creates a directory at /var/www/pterodactyl__
+- __Step: 1 # This command creates a directory at /var/www/pterodactyl__
 
 ```shell
 mkdir -p /var/www/pterodactyl
 ```
 <br>
 
-- __This command changes the current working directory to /var/www/pterodactyl__
+- __Step: 2 # This command changes the current working directory to /var/www/pterodactyl__
 
 ```shell
 cd /var/www/pterodactyl
 ```
 <br>
 
-- __This command downloads the latest Pterodactyl Panel archive from GitHub and saves it__
+- __Step: 3 # This command downloads the latest Pterodactyl Panel archive from GitHub and saves it__
 
 ```shell
 curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
 ```
 <br>
 
-- __This command extracts the contents of the panel.tar.gz archive.__
+- __Step: 4 # This command extracts the contents of the panel.tar.gz archive.__
   
 ```shell
 tar -xzvf panel.tar.gz
 ```
 <br>
 
-- __sets the file permissions for the storage/ and bootstrap/cache/ directories.__
+- __Step: 5 # sets the file permissions for the storage/ and bootstrap/cache/ directories.__
 
 ```shell
 chmod -R 755 storage/* bootstrap/cache/
