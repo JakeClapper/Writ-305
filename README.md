@@ -301,16 +301,28 @@ sudo systemctl enable --now pteroq.service
 # Webserver Configuration
 
 
+<br>
+
+- __Step: 1 # remove the default NGINX configuration.__
 ```shell
 rm /etc/nginx/sites-enabled/default
 ```
 
-test
+<br>
 
+- __Step: 1 # create a new configuration file in /etc/nginx/sites-available/ directory.__
+```shell
+sudo nano /etc/nginx/conf.d/pterodactyl.conf
+```
+
+
+<br>
+
+- __Step: 2 # Inside the editor, paste the following configuration, replacing <domain> with your actual domain name.__
 
 ```shell
 server {
-    # Replace the example <domain> with your domain name or IP address![jest_logo](https://github.com/user-attachments/assets/e706b098-1d14-4aea-ac63-4cef5f237c4f)
+    
 
     listen 80;
     server_name <domain>;
@@ -377,18 +389,31 @@ server {
     }
 }
 ```
+<br>
 
-test
+- __Step: 2 # Press Ctrl + X, then press Y, and hit Enter to save the file.__
 
+<br>
+<br>
+
+# Part: 12
+# Enabling Configuration
+
+<br>
+
+- __Step: 1 # Create a symbolic link for the NGINX configuration.__
 ```shell
 sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/pterodactyl.conf
 ```
 
+<br>
+
+- __Step: 2 # Restart NGINX to apply the new configuration.__
 ```shell
 sudo systemctl restart nginx
 ```
 
-test
+
 
 Starting Wings
 
