@@ -107,41 +107,55 @@ chmod -R 755 storage/* bootstrap/cache/
 <br>
 <br>
 
-# Installation
 
-
-
-<br>
-<br>
-
+# Part: 4
 # Database Configuration
 
-You will need a database setup and a user with the correct permissions created for that database before continuing any further. See below to create a user and database for your Pterodactyl panel quickly. To find more detailed information please have a look at Setting up MySQL.
 
-```shell
-mariadb -u root -p
-```
+<br>
 
+- __Step: 1 # opens the MySQL client as the root user.__
 ```shell
 mysql -u root -p
 ```
 
+<br>
 
+- __Step: 2 # creates a new database user named pterodactyl. Replace yourPassword with your own password.__
 ```shell
 CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
+```
+<br>
+
+- __Step: 3 # creates a new database named panel.__
+```shell
 CREATE DATABASE panel;
+```
+<br>
+
+- __Step: 4 # grants the pterodactyl user full permissions to the panel database.__
+```shell
 GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
 exit
 ```
 
+<br>
 
+- __Step: 5 # copies the example environment file .env.example to a new file__
 
 ```shell
 cp .env.example .env
-COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
+```
+<br>
 
-# Only run the command below if you are installing this Panel for
-# the first time and do not have any Pterodactyl Panel data in the database.
+- __Step: 6 # installs all necessary PHP dependencies for the Pterodactyl Panel.__
+```shell
+COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
+```
+<br>
+
+- __Step: 7 # generates a new encryption key for the application and saves it.__
+```shell
 php artisan key:generate --force
 ```
 
