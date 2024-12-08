@@ -162,14 +162,24 @@ php artisan key:generate --force
 <br>
 <br>
 
+# Part: 5
 # Environment Configuration
+<br>
 
+- __Step: 1 # sets up the general environment for the Pterodactyl Panel.__
 ```shell
 php artisan p:environment:setup
-php artisan p:environment:database
+```
+<br>
 
-# To use PHP's internal mail sending (not recommended), select "mail". To use a
-# custom SMTP server, select "smtp".
+- __Step: 2 # configures the database connection for the Pterodactyl Panel.__
+```shell
+php artisan p:environment:database
+```
+<br>
+
+- __Step: 3 # configures the mail settings for the Panel.__
+```shell
 php artisan p:environment:mail
 ```
 <br>
