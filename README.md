@@ -5,7 +5,7 @@ WP# 3
 
 # Dependency Installation
 
-
+<span style="color:red">This is red text</span>
 - <span style="color:red">- Step: 1 # Add "add-apt-repository" command</span>
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
