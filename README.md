@@ -391,7 +391,7 @@ server {
 ```
 <br>
 
-- __Step: 2 # Press Ctrl + X, then press Y, and hit Enter to save the file.__
+- __Step: 3 # Press Ctrl + X, then press Y, and hit Enter to save the file.__
 
 <br>
 <br>
@@ -412,15 +412,114 @@ sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/
 ```shell
 sudo systemctl restart nginx
 ```
+<br>
+<br>
 
+# Part: 13
+# Installing Docker
 
+<br>
 
-Starting Wings
-
+- __Step: 1 # install Docker on your system.__
 ```shell
-
+curl -sSL https://get.docker.com/ | CHANNEL=stable bash
 ```
 
-```diff
-- red
-  ```
+<br>
+<br>
+
+# Part: 14
+# Start Docker on Boot
+<br>
+
+- __Step: 1 # enable the Docker service to start automatically.__
+```shell
+sudo systemctl enable --now docker
+```
+
+
+
+<br>
+<br>
+
+# Part: 15
+# Enabling Swap
+
+<br>
+
+- __Step: 1 # Open the /etc/default/grub file as a root user.__
+```shell
+sudo nano /etc/default/grub
+```
+
+<br>
+
+- __Step: 2 # Find the line starting with GRUB_CMDLINE_LINUX_DEFAULT and add swapaccount=1.__
+```shell
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash swapaccount=1"
+```
+
+<br>
+
+- __Step: 3 # update the bootloader with the new settings.__
+```shell
+sudo update-grub
+```
+
+<br>
+
+- __Step: 4 # Restart the system.__
+```shell
+sudo reboot
+```
+
+<br>
+<br>
+
+# Part: 16
+# Installing Wings
+
+<br>
+
+- __Step: 1 # Create the directory /etc/pterodactyl.__
+```shell
+sudo mkdir -p /etc/pterodactyl
+```
+
+<br>
+
+- __Step: 2 # Download the Wings executable.__
+```shell
+curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+```
+
+<br>
+
+- __Step: 3 # Make the downloaded Wings executable runnable.__
+```shell
+sudo chmod u+x /usr/local/bin/wings
+```
+
+<br>
+<br>
+
+# Part: 17
+# Configure
+
+<br>
+<br>
+
+# Part: 18
+# Starting Wings
+
+<br>
+<br>
+
+# Part: 19
+# Daemonizing
+
+<br>
+<br>
+
+# Part: 19
+# Node Allocations
