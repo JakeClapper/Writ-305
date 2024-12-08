@@ -57,8 +57,8 @@ apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 # Installing Composer
 <br>
 
-- __Composer is a dependency manager for PHP that allows us to ship everything you'll need code wise to operate the Panel. You'll need composer installed before continuing in this process.__
-- 
+- __Step: 1 # downloads and installs Composer, a dependency manager for PHP.__
+
 ```shell
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
