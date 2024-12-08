@@ -52,8 +52,12 @@ apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 ```
 <br>
 <br>
-# Installing Composer
 
+# Installing Composer
+<br>
+
+- __Composer is a dependency manager for PHP that allows us to ship everything you'll need code wise to operate the Panel. You'll need composer installed before continuing in this process.__
+- 
 ```shell
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
@@ -62,21 +66,38 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 <br>
 
 # Download Files
+<br>
+
+- __This command creates a directory at /var/www/pterodactyl__
 
 ```shell
 mkdir -p /var/www/pterodactyl
 ```
+<br>
+
+- __This command changes the current working directory to /var/www/pterodactyl__
+
 ```shell
 cd /var/www/pterodactyl
 ```
+<br>
 
+- __This command downloads the latest Pterodactyl Panel archive from GitHub and saves it__
 
 ```shell
 curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
 ```
+<br>
+
+- __This command extracts the contents of the panel.tar.gz archive.__
+  
 ```shell
 tar -xzvf panel.tar.gz
 ```
+<br>
+
+- __sets the file permissions for the storage/ and bootstrap/cache/ directories.__
+
 ```shell
 chmod -R 755 storage/* bootstrap/cache/
 ```
