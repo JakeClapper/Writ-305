@@ -1,5 +1,7 @@
 # Writ-305
 WP# 3
+<br>
+<br>
 
 # Dependency Installation
 
@@ -29,12 +31,16 @@ apt update
 ```shell
 apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
-
+<br>
+<br>
 # Installing Composer
 
 ```shell
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
+
+<br>
+<br>
 
 # Download Files
 
@@ -56,11 +62,15 @@ tar -xzvf panel.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
 
+<br>
+<br>
 
 # Installation
 
 
 
+<br>
+<br>
 
 # Database Configuration
 
@@ -93,6 +103,8 @@ COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
 php artisan key:generate --force
 ```
 
+<br>
+<br>
 
 # Environment Configuration
 
@@ -104,6 +116,8 @@ php artisan p:environment:database
 # custom SMTP server, select "smtp".
 php artisan p:environment:mail
 ```
+<br>
+<br>
 
 # Database Setup
 
@@ -111,7 +125,8 @@ php artisan p:environment:mail
 php artisan migrate --seed --force
 ```
 
-
+<br>
+<br>
 # Add The First User
 
 ```shell
@@ -119,6 +134,8 @@ php artisan p:user:make
 ```
 
 
+<br>
+<br>
 
 # Set Permissions
 
@@ -132,14 +149,22 @@ chown -R nginx:nginx /var/www/pterodactyl/*
 # If using Apache on RHEL / Rocky Linux / AlmaLinux
 chown -R apache:apache /var/www/pterodactyl/*
 ```
+<br>
+<br>
 
 # Queue Listeners
+
+<br>
+<br>
 
 # Crontab Configuration
 
 ```shell
 * * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
+
+<br>
+<br>
 
 # Create Queue Worker
 
@@ -176,6 +201,8 @@ Finally, enable the service and set it to boot on machine start.
 ```shell
 sudo systemctl enable --now pteroq.service
 ```
+<br>
+<br>
 
 # Next Step: Webserver Configuration
 
