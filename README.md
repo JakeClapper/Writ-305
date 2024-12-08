@@ -520,7 +520,7 @@ sudo chmod u+x /usr/local/bin/wings
 
 <br>
 <br>
-
+![stack Overflow](http://lmsotfy.com/so.png)
 # Part: 19
 # Node Allocations
 
