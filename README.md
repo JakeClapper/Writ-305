@@ -3,10 +3,11 @@ WP# 3
 <br>
 <br>
 
-**<p style="color: green;">+ This text will appear in green</p>
+
+
 
 # Dependency Installation
-
+- __Step: 1 # Add "add-apt-repository" command__
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 ```
