@@ -3,7 +3,7 @@ WP# 3
 <br>
 <br>
 
-<p style="color: green;">+ This text will appear in green</p>
+**<p style="color: green;">+ This text will appear in green</p>
 
 # Dependency Installation
 
