@@ -506,6 +506,8 @@ sudo chmod u+x /usr/local/bin/wings
 # Part: 17
 # Configure
 
+![Wings Configuration Example](https://raw.githubusercontent.com/JakeClapper/Writ-305/main/wings_configuration_example.9f3fdd0b.png)
+
 <br>
 <br>
 
