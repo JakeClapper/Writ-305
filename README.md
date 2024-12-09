@@ -11,10 +11,12 @@
  - Linux OS: Use Ubuntu 20.04 LTS or newer.
  - Optional: __MobaXTerm__ for SSH connections.
 
-
-Step 1: SSH Using MobaXTerm
+<br>
+__Step 1: SSH Using MobaXTerm__
 Start a New Session
+<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/pterodactyl.png?raw=true" alt="Sublime's custom image"/>
 
+<br>
 Open MobaXTerm.
 Click on Sessions in the toolbar, then choose New Session.
 Select SSH
