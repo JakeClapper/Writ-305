@@ -12,9 +12,11 @@
  - Optional: __MobaXTerm__ for SSH connections.
 
 <br>
+
 __Step 1: SSH Using MobaXTerm__
-Start a New Session
-<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/pterodactyl.png?raw=true" alt="Sublime's custom image"/>
+ - Start a New Session
+
+<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/mobx.png?raw=true" alt="Sublime's custom image"/>
 
 <br>
 Open MobaXTerm.
