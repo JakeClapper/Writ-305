@@ -581,10 +581,19 @@ sudo systemctl enable --now wings
 # Part: 19
 # Node Allocations
 
+<br>
+
+- __Step: 1 # Create Allocations.__
+  - Go to the Panel.
+  - Navigate to Nodes > [Your Node] > Allocation.
+  - Add a new allocation by specifying the IP and port.
 
 
+![Node Allocations](https://raw.githubusercontent.com/JakeClapper/Writ-305/main/node_allocations.323d67f2.png)
 
-
+-__Important Notes__
+- Do not use 127.0.0.1 (localhost) for allocations.
+- Use the correct IP address based on your server's network configuration.
 
 
 # Your Pterodactyl environment is now ready to deploy and manage servers! 🚀
