@@ -13,6 +13,8 @@
 
 <br>
 
+# __Accessing Your Virtual Server Via MobaXterm__
+<br>
 __Step: 1 # Getting Started with MobaXterm__
  - Open MobaXTerm.
  - Click on Sessions in the toolbar, then choose New Session.
@@ -25,6 +27,7 @@ __Step: 2 # Accessing the Terminal__
  - In the session setup, select SSH.
  - Enter your virtual server's IP Address.
  - Click OK.
+<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/sshpic.png?raw=true" alt="Sublime's custom image"/>
 <br>
 
 __Step: 3 #Loggin in to your Virtual Server__ 
