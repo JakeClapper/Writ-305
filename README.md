@@ -1,4 +1,4 @@
-# How to Install Pterodactyl Panel on Your Virtual Server
+                                                    # How to Install Pterodactyl Panel on Your Virtual Server
 <p align="center">
   <img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/pterodactyl.png?raw=true" alt="Sublime's custom image"/>
 </p>
