@@ -505,8 +505,26 @@ sudo chmod u+x /usr/local/bin/wings
 
 # Part: 17
 # Configure
+<br>
+
+- __Step: 1 # Create a Node on Your Panel.__
+  - Go to your Panel's administrative view
+  - Select Nodes from the sidebar.
+  - On the right side, click the Create New button.
 
 ![Wings Configuration Example](https://raw.githubusercontent.com/JakeClapper/Writ-305/main/wings_configuration_example.9f3fdd0b.png)
+<br>
+
+- __Step: 2 # Access the Configuration Tab.__
+  - After creating a node, click on it to open its details.
+  - Navigate to the Configuration tab.
+
+<br>
+
+- __Step: 3 # Copy and Save the Configuration.__
+  - Copy the content of the code block provided in the Configuration tab.
+  - Paste it into a new file called config.yml in /etc/pterodactyl.
+  - Save the file.
 
 <br>
 <br>
@@ -522,7 +540,7 @@ sudo chmod u+x /usr/local/bin/wings
 
 <br>
 <br>
-![stack Overflow](http://lmsotfy.com/so.png)
+
 # Part: 19
 # Node Allocations
 
