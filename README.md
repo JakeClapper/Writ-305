@@ -14,7 +14,9 @@
 <br>
 
 # __Accessing Your Virtual Server Via MobaXterm__
+
 <br>
+
 __Step: 1 # Getting Started with MobaXterm__
  - Open MobaXTerm.
  - Click on Sessions in the toolbar, then choose New Session.
