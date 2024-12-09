@@ -531,12 +531,49 @@ sudo chmod u+x /usr/local/bin/wings
 
 # Part: 18
 # Starting Wings
+<br>
+
+- __Step: 1 # start Wings in debug mode and confirm it's running without errors.__
+```shell
+sudo wings --debug
+```
 
 <br>
 <br>
 
 # Part: 19
 # Daemonizing
+<br>
+
+- __Step: 1 # Place the following contents into a file named wings.service located in the /etc/systemd/system directory.__
+```shell
+[Unit]
+Description=Pterodactyl Wings Daemon
+After=docker.service
+Requires=docker.service
+PartOf=docker.service
+
+[Service]
+User=root
+WorkingDirectory=/etc/pterodactyl
+LimitNOFILE=4096
+PIDFile=/var/run/wings/daemon.pid
+ExecStart=/usr/local/bin/wings
+Restart=on-failure
+StartLimitInterval=180
+StartLimitBurst=30
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+<br>
+
+- __Step: 2 #  reload systemd and start Wings.__
+```shell
+sudo systemctl enable --now wings
+```
 
 <br>
 <br>
@@ -546,3 +583,8 @@ sudo chmod u+x /usr/local/bin/wings
 
 
 
+
+
+
+
+# Your Pterodactyl environment is now ready to deploy and manage servers! 🚀
