@@ -69,7 +69,7 @@ echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://pack
 ```
 <br>
 
-- __Step: 4 # MariaDB repo setup script (Ubuntu 20.04)y__
+- __Step: 4 # MariaDB repo setup script (Ubuntu 20.04)__
 
 ```shell
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
@@ -108,35 +108,35 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 # Download Files
 <br>
 
-- __Step: 1 # This command creates a directory at /var/www/pterodactyl__
+- __Step: 1 # Create a directory at /var/www/pterodactyl__
 
 ```shell
 mkdir -p /var/www/pterodactyl
 ```
 <br>
 
-- __Step: 2 # This command changes the current working directory to /var/www/pterodactyl__
+- __Step: 2 # Change the current working directory to /var/www/pterodactyl__
 
 ```shell
 cd /var/www/pterodactyl
 ```
 <br>
 
-- __Step: 3 # This command downloads the latest Pterodactyl Panel archive from GitHub and saves it__
+- __Step: 3 # Download the latest Pterodactyl Panel archive from GitHub and saves it__
 
 ```shell
 curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
 ```
 <br>
 
-- __Step: 4 # This command extracts the contents of the panel.tar.gz archive.__
+- __Step: 4 # Extract the contents of the panel.tar.gz archive.__
   
 ```shell
 tar -xzvf panel.tar.gz
 ```
 <br>
 
-- __Step: 5 # sets the file permissions for the storage/ and bootstrap/cache/ directories.__
+- __Step: 5 # Set the file permissions for the storage/ and bootstrap/cache/ directories.__
 
 ```shell
 chmod -R 755 storage/* bootstrap/cache/
@@ -152,26 +152,26 @@ chmod -R 755 storage/* bootstrap/cache/
 
 <br>
 
-- __Step: 1 # opens the MySQL client as the root user.__
+- __Step: 1 # Open the MySQL client as the root user.__
 ```shell
 mysql -u root -p
 ```
 
 <br>
 
-- __Step: 2 # creates a new database user named pterodactyl. Replace yourPassword with your own password.__
+- __Step: 2 # Create a new database user named pterodactyl. Replace yourPassword with your own password.__
 ```shell
 CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
 ```
 <br>
 
-- __Step: 3 # creates a new database named panel.__
+- __Step: 3 # Create a new database named panel.__
 ```shell
 CREATE DATABASE panel;
 ```
 <br>
 
-- __Step: 4 # grants the pterodactyl user full permissions to the panel database.__
+- __Step: 4 # Grant the pterodactyl user full permissions to the panel database.__
 ```shell
 GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
 exit
@@ -179,20 +179,20 @@ exit
 
 <br>
 
-- __Step: 5 # copies the example environment file .env.example to a new file__
+- __Step: 5 # Copy the example environment file .env.example to a new file__
 
 ```shell
 cp .env.example .env
 ```
 <br>
 
-- __Step: 6 # installs all necessary PHP dependencies for the Pterodactyl Panel.__
+- __Step: 6 # Install all necessary PHP dependencies for the Pterodactyl Panel.__
 ```shell
 COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
 ```
 <br>
 
-- __Step: 7 # generates a new encryption key for the application and saves it.__
+- __Step: 7 # Generate a new encryption key for the application and saves it.__
 ```shell
 php artisan key:generate --force
 ```
@@ -204,19 +204,19 @@ php artisan key:generate --force
 # Environment Configuration
 <br>
 
-- __Step: 1 # sets up the general environment for the Pterodactyl Panel.__
+- __Step: 1 # Set up the general environment for the Pterodactyl Panel.__
 ```shell
 php artisan p:environment:setup
 ```
 <br>
 
-- __Step: 2 # configures the database connection for the Pterodactyl Panel.__
+- __Step: 2 # Configure the database connection for the Pterodactyl Panel.__
 ```shell
 php artisan p:environment:database
 ```
 <br>
 
-- __Step: 3 # configures the mail settings for the Panel.__
+- __Step: 3 # Configure the mail settings for the Panel.__
 ```shell
 php artisan p:environment:mail
 ```
@@ -228,7 +228,7 @@ php artisan p:environment:mail
 
 <br>
 
-- __Step: 1 # runs the database migrations to set up the necessary tables and structures.__
+- __Step: 1 # Run the database migrations to set up the necessary tables and structures.__
 ```shell
 php artisan migrate --seed --force
 ```
@@ -236,7 +236,7 @@ php artisan migrate --seed --force
 
 <br>
 
-- __Step: 2 # creates the first administrative user for the Pterodactyl Panel.__
+- __Step: 2 # Create the first administrative user for the Pterodactyl Panel.__
 ```shell
 php artisan p:user:make
 ```
@@ -250,7 +250,7 @@ php artisan p:user:make
 
 <br>
 
-- __Step: 1 # Changes the ownership of all files and directories.__
+- __Step: 1 # Change the ownership of all files and directories.__
 ```shell
 chown -R www-data:www-data /var/www/pterodactyl/*
 ```
@@ -263,14 +263,14 @@ chown -R www-data:www-data /var/www/pterodactyl/*
 
 <br>
 
-- __Step: 1 # Opens the root user's crontab file for editing.__
+- __Step: 1 # Open the root user's crontab file for editing.__
   
 ```shell
 sudo crontab -e
 ```
 <br>
 
-- __Step: 2 # schedules a task to run every minute.__
+- __Step: 2 # Schedule a task to run every minute.__
     
 ```shell
 * * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
@@ -284,7 +284,7 @@ sudo crontab -e
 
 <br>
 
-- __Step: 1 # creates the pteroq.service file in the /etc/systemd/system/ directory.__
+- __Step: 1 # Create the pteroq.service file in the /etc/systemd/system/ directory.__
 
 ```shell
 sudo nano /etc/systemd/system/pteroq.service
@@ -321,14 +321,14 @@ WantedBy=multi-user.target
 
 <br>
 
-- __Step: 3 # Enables and starts the Redis service.__
+- __Step: 3 # Enable and start the Redis service.__
 ```shell
 sudo systemctl enable --now redis-server
 ```
 
 <br>
 
-- __Step: 4 # enables the service to start at boot and starts it.__
+- __Step: 4 # Enable the service to start at boot and starts it.__
 ```shell
 sudo systemctl enable --now pteroq.service
 ```
@@ -341,14 +341,14 @@ sudo systemctl enable --now pteroq.service
 
 <br>
 
-- __Step: 1 # remove the default NGINX configuration.__
+- __Step: 1 # Remove the default NGINX configuration.__
 ```shell
 rm /etc/nginx/sites-enabled/default
 ```
 
 <br>
 
-- __Step: 1 # create a new configuration file in /etc/nginx/sites-available/ directory.__
+- __Step: 1 # Create a new configuration file in /etc/nginx/sites-available/ directory.__
 ```shell
 sudo nano /etc/nginx/conf.d/pterodactyl.conf
 ```
@@ -458,7 +458,7 @@ sudo systemctl restart nginx
 
 <br>
 
-- __Step: 1 # install Docker on your system.__
+- __Step: 1 # Install Docker on your system.__
 ```shell
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash
 ```
@@ -470,7 +470,7 @@ curl -sSL https://get.docker.com/ | CHANNEL=stable bash
 # Start Docker on Boot
 <br>
 
-- __Step: 1 # enable the Docker service to start automatically.__
+- __Step: 1 # Enable the Docker service to start automatically.__
 ```shell
 sudo systemctl enable --now docker
 ```
@@ -499,7 +499,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash swapaccount=1"
 
 <br>
 
-- __Step: 3 # update the bootloader with the new settings.__
+- __Step: 3 # Update the bootloader with the new settings.__
 ```shell
 sudo update-grub
 ```
@@ -571,7 +571,7 @@ sudo chmod u+x /usr/local/bin/wings
 # Starting Wings
 <br>
 
-- __Step: 1 # start Wings in debug mode and confirm it's running without errors.__
+- __Step: 1 # Start Wings in debug mode and confirm it's running without errors.__
 ```shell
 sudo wings --debug
 ```
@@ -608,7 +608,7 @@ WantedBy=multi-user.target
 
 <br>
 
-- __Step: 2 #  reload systemd and start Wings.__
+- __Step: 2 # Reload systemd and start Wings.__
 ```shell
 sudo systemctl enable --now wings
 ```
