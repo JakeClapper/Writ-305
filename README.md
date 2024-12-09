@@ -25,7 +25,7 @@ __Step: 2 # Accessing the Terminal__
  - In the session setup, select SSH.
  - Enter your virtual server's IP Address.
  - Click OK.
-<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/mobx.png?raw=true" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/logins.png?raw=true" alt="Sublime's custom image"/>
 
 In the session setup, select SSH.
 Enter your virtual server's IP Address.
