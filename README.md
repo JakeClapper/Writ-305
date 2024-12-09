@@ -1,5 +1,32 @@
-# Writ-305
-WP# 3
+How to Install Pterodactyl Panel on Your Virtual Server
+Requirements Before Installing
+Optional: A DNS provider like Squarespace.
+Hosting with SSH Access: Example - OVHCloud.
+Linux OS: Use Ubuntu 20.04 LTS or newer.
+Optional: MobaXTerm for SSH connections.
+Step 1: SSH Using MobaXTerm
+Start a New Session
+
+Open MobaXTerm.
+Click on Sessions in the toolbar, then choose New Session.
+Select SSH
+
+In the session setup, select SSH.
+Enter your virtual server's IP Address.
+Click OK.
+Login to the Server
+
+When prompted for Login as, type:
+Copy code
+root
+Press Enter.
+Paste Your SSH Key
+
+Paste your SSH private key into the terminal when prompted.
+Press Enter again.
+Connection Established
+
+Once successfully connected, you're ready to proceed with the installation guide.
 <br>
 <br>
 
