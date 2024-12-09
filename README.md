@@ -1,10 +1,10 @@
 # How to Install Pterodactyl Panel on Your Virtual Server
                                                     
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/pterodactyl.png?raw=true" alt="Sublime's custom image"/>
-</p>
+<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/pterodactyl.png?raw=true" alt="Sublime's custom image"/>
 
 <br>
+
+
  # __Requirements Before Installing__
  - Optional: A DNS provider like __Squarespace__.
  - Hosting with SSH Access: Example - __OVHCloud__.
