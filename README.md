@@ -13,15 +13,19 @@
 
 <br>
 
-__Step 1: SSH Using MobaXTerm__
- - Start a New Session
+__Step: 1 # Getting Started with MobaXterm__
+ - Open MobaXTerm.
+ - Click on Sessions in the toolbar, then choose New Session.
 
 <img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/mobx.png?raw=true" alt="Sublime's custom image"/>
 
 <br>
-Open MobaXTerm.
-Click on Sessions in the toolbar, then choose New Session.
-Select SSH
+
+__Step: 2 # Accessing the Terminal__ 
+ - In the session setup, select SSH.
+ - Enter your virtual server's IP Address.
+ - Click OK.
+<img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/mobx.png?raw=true" alt="Sublime's custom image"/>
 
 In the session setup, select SSH.
 Enter your virtual server's IP Address.
