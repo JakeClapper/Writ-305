@@ -1,5 +1,6 @@
 # How to Install Pterodactyl Panel on Your Virtual Server
-![panel image](https://raw.githubusercontent.com/JakeClapper/Writ-305/main/wings_configuration_example.9f3fdd0b.png)
+![panel image](https://raw.githubusercontent.com/JakeClapper/Writ-305/main/pterodactyl.png)
+<br>
  # __Requirements Before Installing__
  - Optional: A DNS provider like __Squarespace__.
  - Hosting with SSH Access: Example - __OVHCloud__.
