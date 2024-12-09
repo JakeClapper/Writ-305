@@ -1,9 +1,11 @@
-How to Install Pterodactyl Panel on Your Virtual Server
-Requirements Before Installing
-Optional: A DNS provider like Squarespace.
-Hosting with SSH Access: Example - OVHCloud.
-Linux OS: Use Ubuntu 20.04 LTS or newer.
-Optional: MobaXTerm for SSH connections.
+# How to Install Pterodactyl Panel on Your Virtual Server
+- __Requirements Before Installing__
+ - Optional: A DNS provider like __Squarespace__.
+ - Hosting with SSH Access: Example - __OVHCloud__.
+ - Linux OS: Use Ubuntu 20.04 LTS or newer.
+ - Optional: __MobaXTerm__ for SSH connections.
+
+
 Step 1: SSH Using MobaXTerm
 Start a New Session
 
@@ -605,7 +607,7 @@ sudo systemctl enable --now wings
 <br>
 <br>
 
-# Part: 19
+# Part: 20
 # Node Allocations
 
 <br>
