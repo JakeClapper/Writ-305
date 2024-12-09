@@ -25,24 +25,14 @@ __Step: 2 # Accessing the Terminal__
  - In the session setup, select SSH.
  - Enter your virtual server's IP Address.
  - Click OK.
+<br>
+
+__Step: 3 #Loggin in to your Virtual Server__ 
+ - When prompted for Login; Type: root.
+ - When prompted for Password: Paste in your SSH private key.
 <img src="https://raw.githubusercontent.com/JakeClapper/Writ-305/main/logins.png?raw=true" alt="Sublime's custom image"/>
+ - Once successfully connected, you're ready to proceed with the installation guide.
 
-In the session setup, select SSH.
-Enter your virtual server's IP Address.
-Click OK.
-Login to the Server
-
-When prompted for Login as, type:
-Copy code
-root
-Press Enter.
-Paste Your SSH Key
-
-Paste your SSH private key into the terminal when prompted.
-Press Enter again.
-Connection Established
-
-Once successfully connected, you're ready to proceed with the installation guide.
 <br>
 <br>
 
