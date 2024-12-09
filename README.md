@@ -51,7 +51,7 @@ apt -y install software-properties-common curl apt-transport-https ca-certificat
 ```
 <br>
 
- __Step 2: #__ Add additional repositories for PHP (Ubuntu 20.04 and Ubuntu 22.04)
+ __Step 2:__ Add additional repositories for PHP (Ubuntu 20.04 and Ubuntu 22.04)
 
 ```shell
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
