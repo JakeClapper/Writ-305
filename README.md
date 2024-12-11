@@ -45,7 +45,7 @@ __Step 3:__ Loggin in to your Virtual Server.
 
 # Part: 1
 # Dependency Installation 
-__Step 1__ Add "add-apt-repository" command.
+__Step 1:__ Add "add-apt-repository" command.
 ```shell
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 ```
