@@ -506,7 +506,7 @@ sudo update-grub
 
 <br>
 
-__Step 4:__ # Restart the system.
+__Step 4:__  Restart the system.
 ```shell
 sudo reboot
 ```
