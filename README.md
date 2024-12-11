@@ -108,14 +108,14 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 # Download Files
 <br>
 
-__Step 1:__ # Create a directory at /var/www/pterodactyl.
+__Step 1:__ Create a directory at /var/www/pterodactyl.
 
 ```shell
 mkdir -p /var/www/pterodactyl
 ```
 <br>
 
-__Step 2:__  Change the current working directory to /var/www/pterodactyl.
+__Step 2:__ Change the current working directory to /var/www/pterodactyl.
 
 ```shell
 cd /var/www/pterodactyl
