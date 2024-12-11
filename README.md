@@ -95,7 +95,7 @@ apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 # Installing Composer
 <br>
 
-__Step 1:__ downloads and installs Composer, a dependency manager for PHP.
+__Step 1:__ Downloads and installs Composer, a dependency manager for PHP.
 
 ```shell
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
@@ -115,7 +115,7 @@ mkdir -p /var/www/pterodactyl
 ```
 <br>
 
-__Step 2:__ # Change the current working directory to /var/www/pterodactyl.
+__Step 2:__  Change the current working directory to /var/www/pterodactyl.
 
 ```shell
 cd /var/www/pterodactyl
