@@ -17,7 +17,7 @@
 
 <br>
 
-__Step: 1 # Getting Started with MobaXterm__
+__Step 1:__ Getting Started with MobaXterm
  - Open MobaXTerm.
  - Click on Sessions in the toolbar, then choose New Session.
 
