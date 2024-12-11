@@ -250,7 +250,7 @@ php artisan p:user:make
 
 <br>
 
-__Step 1:__ # Change the ownership of all files and directories.
+__Step 1:__ Change the ownership of all files and directories.
 ```shell
 chown -R www-data:www-data /var/www/pterodactyl/*
 ```
